@@ -1,0 +1,314 @@
+:root {
+    --scarlet-color: #a91101;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: var(--scarlet-color);
+    border-bottom: 7px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+#header-text {
+    margin-left: 1rem;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-size: 4rem;
+}
+#nav-bar {
+    margin-right: -5px;
+    width: 30%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+
+}
+.nav-bar-text-container {
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+}
+.nav-bar-text-container:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.nav-bar-text-container:first-child {
+    right: -5px;
+}
+.nav-bar-text-container:last-child {
+    left: -5px;
+}
+.nav-bar-text {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+    text-decoration: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+.page {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 3px solid black;
+}
+.front {
+    background: linear-gradient(
+        to bottom,
+        black 55%,
+        var(--scarlet-color)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front {
+    padding-top: 90px;
+    height: 70vw
+}
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+}
+ #front-page-image {
+    display: block;
+    border-radius: 10%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 50%;
+    z-index: 0;
+} 
+.profile-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+} 
+.title-text {
+    text-align: center;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 4vw;
+    text-decoration: underline;
+}
+hr {
+    margin-bottom: 100px;
+}
+#profile-text {
+    color: white;
+}
+#band-description {
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 3.5vw;
+    text-align: center;
+    color: white;
+    width: 70%;
+    margin: 10% auto 5%;
+}
+#socials-title {
+    color: white;
+    font-size: 3vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+} 
+.icons-divider {
+    font-size: 8vw;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+}
+#members {
+    height: auto;
+    padding-bottom: 160px;
+}
+.member-entry-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 70vw;
+    height: auto;
+}
+.member-entry {
+    width: 100%;
+    height: 18vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: -60px;
+}
+.entry-right {
+    justify-content: flex-end;
+}
+.member-photo{
+    border-radius: 10px;
+    object-fit: cover;
+    width: auto;
+    max-height: 100%;
+    display: block;
+}
+.member-description {
+    width: 40%;
+    height: 100%;
+}
+.member-role {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4vw;
+    margin-bottom: 10px;
+}
+.member-name {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+    margin-top: 10px;
+}
+#william-text {
+    position: relative;
+    left: -4%;
+}
+#jun-text {
+    position: relative;
+    right: -3%;
+}
+#photography {
+    height: auto;
+    border-bottom: 3px solid black;
+}
+#photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+.photo-in-gallery {
+    border-radius: 10px;
+    height: auto;
+    width: 40vw;
+    display: block;
+}
+footer {
+    width: 100%; 
+    height: 15vh;
+    background-color: var(--scarlet-color);
+}
+@media only screen and (max-width: 1000px) {
+    .front {
+        height: 100vh;
+    }
+    .image-container {
+        width: 80vw;
+    }
+    .title-text {
+        font-size: 6vw;
+    }
+    #band-description {
+        margin-top: 4%;
+        font-size: 5vw;
+    }
+    #socials-title {
+        font-size: 6vw;
+        margin-bottom: 0;
+    }
+    .icons-divider {
+        font-size: 10vw;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .image-container {
+        width: 100vw;
+    }
+    #band-description {
+        font-size: 7vw;
+        margin-bottom: 0;
+    }
+    #band-description {
+        font-size: 7vw;
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+    #members {
+        padding-bottom: 50px;
+    }
+    .member-entry {
+        margin-bottom: -30px;
+        height: 30vw;
+    }
+}
+@media only screen and (max-width: 636px) {
+    header {
+        height: 60px;
+    }
+    #header-text {
+        font-size: 3rem;
+    }
+    #nav-bar {
+        display: none;
+    }
+    #header-text {
+        display: normal;
+        margin: 0 auto;
+    }
+    .photo-in-gallery {
+        width: 80vw;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .title-text {
+        font-size: 8vw;
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+    .member-entry {
+        margin-bottom: 0;
+    }
+}
