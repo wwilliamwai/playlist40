@@ -1,0 +1,344 @@
+:root {
+    --scarlet-color: #a91101;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: var(--scarlet-color);
+    border-bottom: 7px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+#header-text {
+    margin-left: 1rem;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-size: 4rem;
+}
+#nav-bar {
+    margin-right: -5px;
+    width: 30%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+
+}
+.nav-bar-text-container {
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+}
+.nav-bar-text-container:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.nav-bar-text-container:first-child {
+    right: -5px;
+}
+.nav-bar-text-container:last-child {
+    left: -5px;
+}
+.nav-bar-text {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+    text-decoration: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+.page {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 3px solid black;
+}
+.front {
+    background: linear-gradient(
+        to bottom,
+        black 55%,
+        var(--scarlet-color)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    height: 70vw
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: calc(60vw * 9/16);
+}
+ #front-page-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.credit {
+    font-family: 'Times New Roman', Times, serif
+}
+#elijah {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.socials-divider {
+    position: relative;
+    top: 3%;
+    height: 20%;
+    width: 50vw;
+    border: 5px solid white;
+    border-radius: 30px;
+}
+.socials-text {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 3vw;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.icons-container {
+    margin: 0 auto;
+    position: relative;
+    top: 5%;
+    width: 50%;
+    font-size: 6rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    text-align: center;
+}
+.title-text {
+    text-align: center;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 4vw;
+    text-decoration: underline;
+}
+hr {
+    margin-bottom: 100px;
+}
+#members {
+    height: auto;
+    padding-bottom: 160px;
+}
+.member-entry-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 70vw;
+    height: auto;
+}
+.member-entry {
+    width: 100%;
+    height: 18vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: -60px;
+}
+.entry-right {
+    justify-content: flex-end;
+}
+.member-photo{
+    border-radius: 10px;
+    object-fit: cover;
+    width: auto;
+    max-height: 100%;
+    display: block;
+}
+.member-description {
+    display: block;
+    width: 30vw;
+    height: 100%;
+}
+.member-role {
+    display: block;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 4vw;
+    margin-top: 10%;
+    margin-bottom: 0;
+}
+.member-name {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+}
+#william-text {
+    position: relative;
+    left: -4%;
+}
+#jun-text {
+    position: relative;
+    right: -4%;
+}
+#photography {
+    height: auto;
+    border-bottom: 3px solid black;
+}
+#photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+.photo-in-gallery {
+    border-radius: 10px;
+    height: auto;
+    width: 40vw;
+    display: block;
+}
+#asbtech {
+    margin-left: 2%;
+}
+footer {
+    width: 100%; 
+    height: 15vh;
+    background-color: var(--scarlet-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer-container {
+    position: static;
+}
+@media only screen and (max-width: 1000px) {
+    .video-container {
+        width: 100vw;
+        height: calc(100vw * 9/16);
+    }
+    .socials-divider {
+        width: 100vw;
+    }
+    .socials-text {
+        font-size: 6vw;
+    }
+    .icon {
+        font-size: 5rem;
+    }
+    .front {
+        height: 100vh;
+    }
+    .image-container {
+        width: 80vw;
+    }
+    .title-text {
+        font-size: 6vw;
+    }
+    .member-entry {
+        height: 26vw;
+        margin-bottom: -30px;
+    }
+    .member-role {
+        font-size: 5vw;
+    }
+    .member-name {
+        font-size: 4vw;
+    }
+}
+@media only screen and (max-width: 720px) {
+    hr {
+        margin-bottom: 20px;
+    }
+    .member-entry {
+        height: 35vw;
+        margin-bottom: -20px;
+    }
+    .member-description {
+        width: 45vw;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .member-role {
+        font-size: 6vw;
+    }
+}
+@media only screen and (max-width: 636px) {
+    header {
+        height: 60px;
+    }
+    #header-text {
+        font-size: 3rem;
+    }
+    #nav-bar {
+        display: none;
+    }
+    #header-text {
+        display: normal;
+        margin: 0 auto;
+    }
+    .photo-in-gallery {
+        width: 80vw;
+    }
+    .member-description {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 50vw;
+    }
+    .member-role {
+        font-size: 7vw;
+    }
+    .member-name {
+        font-size: 5vw;
+    }
+    .member-entry {
+        height: 50vw;
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .title-text {
+        font-size: 8vw;
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+}
